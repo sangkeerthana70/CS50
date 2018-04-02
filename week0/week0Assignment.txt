@@ -1,0 +1,40 @@
+CS50 2018 Week 0
+
+In your own words discuss Binary and its impact:
+
+Bi means two which represents 0 and 1 which the computer can understand. They represent the two states either 0 or 1.
+By having two digits 0 and 1 we can represent things much  more powerfully and efficiently.
+
+They are represented with the base 2.
+
+Decimal  binary   Conversion
+0	  =	  0	      0 ( 2^0 )
+1	  =	  001	  1 ( 2^0 )
+2	  =	  010	  1 ( 2^1 ) + 0 ( 2^0 )
+3	  =   011	  1 ( 2^1 ) + 1 ( 2^0 )
+4	  =	  100	  1 ( 2^2 ) + 0 ( 2^1 ) + 0 ( 2^0 )
+5	  =	  101	  1 ( 2^2 ) + 0 ( 2^1 ) + 1 ( 2^0 )
+6     =   110
+7     =   111
+8     =   0111 (Here  we add a 0 in the front which is the equivalent of adding a bit)
+
+Using this binary code we can map it to represent letters as well. This mapping is defined in ASCII code.
+
+The binary code assigns a pattern of binary digits (bits) to each character, instruction, etc. For example, a binary string of eight bits can represent any of 256 possible values and can therefore represent a variety of different items.
+The following is an example of how letters are stored in the computer.
+HI! == 72 73 33 in ASCII
+Thus binary system helps  store large volumes of data efficiently.
+
+
+
+
+In your own words discuss Algorithms as was introduced:
+
+Algorithms are
+Step by step instructions, that will help solve a problem.
+Using algorithms we can write computer programs and analyse the expected and unexpected scenarios when solving a problem.
+They help in breaking down problems into their constituent parts.
+When we methodically express the steps in the algorithm we create a Psudocode.
+
+New Hacking algorithms have been developed with advanced capabilities to penetrate even secure enterprises. This has created serious challenges to all organizations, which spend a vast amount of time and energy to build additional layers of security and monitoring. It also has created additional concerns for individuals who share personal information in social media. Recent example was the revelation that personal data of millions of Facebook users were illegally used by a political consultancy firm called Cambridge Analytica, which potentially helped one presidential candidate over the other in the recent US election.
+

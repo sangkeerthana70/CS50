@@ -1,0 +1,74 @@
+
+Pseudocode to look up a name in phone book.
+
+0 pick up phone book
+1 open to middle of phone book
+2 look at names
+3 if Smith is among names - (here -if- is a construct by which we are questioning ourselves)
+4	call  Mike              (notice the indentation which means only if line-3 is true execute line4)
+5 else if Smith is earlier in book
+6	open to middle of left half of book
+7	go back to step 2
+8 else if Smith is later in book
+9 	open to middle of right half of book
+10	go back to step 2
+11else
+12	quit -(address this scenario when Smith is not there totally else the program will crash)
+
+the above algorithm is recursive which means the steps in the code gets repeated over and over again until the solution is reached.
+
+Writing Conditional statements using scratch.
+
+[[if x < y then
+	say "x is less than y"
+
+Adding nested if and else to the main condition.
+
+if x < y then
+	say "x is less than y" -      Scenario 1
+else
+	if x > Y then
+		say "x is greater than y"-Scenario 2
+	else
+		say "x is equal to y"-    Scenario 3]]]
+
+In the above statement x < y or x > y is a boolean which evaluates it to true or false.
+i < 50 can be used to compare number against variables.
+
+
+	Forever
+		say "Hello world!"
+The above function is a loop that prints "hello world" infinite number of times
+or to make it finite we chane the function to.
+	repeat 50
+		say "hello world"
+
+Setting variables
+	set i = 50
+
+Functions, conditions, boolean expressions, loops, variables, threads and events are all the isdeas that can also be implemented in any programming language.
+Multi threaded means when a program does two things at the same time.
+Event handlers are used widely in web programming languages.
+
+
+broadcast message
+when I receive message.
+These two lines are similar to the event listeners in the Nodejs world of programming.
+
+Eg: To make a meow sound, by Sprite the cat.
+we can create a function.
+
+When clicked
+play sound meow
+
+To repeat the sound we create a for loop.
+
+when clicked
+repeat 3
+	play sound meow
+but since there is no construct here it does not play 3 times instead plays only once.
+
+when clicked
+repeat 3
+	play sound meow until done
+we rewrote the above program to include the condition until done.
