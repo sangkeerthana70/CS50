@@ -36,5 +36,31 @@ Using algorithms we can write computer programs and analyse the expected and une
 They help in breaking down problems into their constituent parts.
 When we methodically express the steps in the algorithm we create a Psudocode.
 
-New Hacking algorithms have been developed with advanced capabilities to penetrate even secure enterprises. This has created serious challenges to all organizations, which spend a vast amount of time and energy to build additional layers of security and monitoring. It also has created additional concerns for individuals who share personal information in social media. Recent example was the revelation that personal data of millions of Facebook users were illegally used by a political consultancy firm called Cambridge Analytica, which potentially helped one presidential candidate over the other in the recent US election.
+Pseudocode to look up a name in phone book.
+
+0 pick up phone book
+1 open to middle of phone book
+2 look at names
+3 if Smith is among names - (here -if- is a construct by which we are questioning ourselves)
+4	call  Mike              (notice the indentation which means only if line-3 is true execute line4)
+5 else if Smith is earlier in book
+6	open to middle of left half of book
+7	go back to step 2
+8 else if Smith is later in book
+9 	open to middle of right half of book
+10	go back to step 2
+11else
+12	quit -(address this scenario when Smith is not there totally else the program will crash)
+
+The above algorithm is recursive which means the steps in the code gets repeated over and
+over again until the solution is reached.
+
+Hacking Algorithm
+New Hacking algorithms have been developed with advanced capabilities to penetrate even secure
+enterprises. This has created serious challenges to all organizations, which spend a vast
+amount of time and energy to build additional layers of security and monitoring. It also has
+created additional concerns for individuals who share personal information in social media.
+Recent example was the revelation that personal data of millions of Facebook users were
+illegally used by a political consultancy firm called Cambridge Analytica, which potentially
+helped one presidential candidate over the other in the recent US election.
 

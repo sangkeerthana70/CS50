@@ -1,0 +1,57 @@
+						News Feed Algorithms
+
+Social media has become an integral part of everyone's lives thesedays. So does everyones network connection in their social media accounts. The more connection a person has the more news feed they are likely to see. This can get too overwhelming when their news feed is bombarded by every single update from every single connection.
+
+To overcome this problem the social media have come up with the algorithm for news feeds.
+All three of today's most popular social networks Facebook, Twitter and Instagram are using an algorithm-based feed in the effort to create better experiences for their users.
+
+It started with Facebook in 2006, and then Twitter nine years later in 2015. In the coming months, Instagram will join the other two in switching from a chronological feed to an algorithm-based feed, too, according to an official announcement.
+
+Facebook CEO Mark Zuckerberg said in a public Q&A in 2014. “Our goal is to build the perfect personalized newspaper for every person in the world,” “We’re trying to personalize it and show you the stuff that’s going to be most interesting to you.”
+According to Zuckerberg, each of us gets exposed to more than 1,500 stories each day, but an average user only gets to see about 100 stories a day on their News Feed.
+To give these users the best experience possible, Zuckerberg and his team of engineers are constantly learning user behavior and picking up signals that show what kind of content each user is most interested in.
+
+ How Facebook's News Feed algorithm works.
+
+Like Button
+With the Like button introduced in 2007,the News Feed algorithm  has helped facebook engineers figure out which posts were delighting users, boring them, offending them, and so on.
+
+Prioritizing Feeds
+The News feed algorithm was changed again when they came up with the "See first" feature under the current NewsFeed Preferences tab which gave the user more control to hand-pick which accounts whether friends or followed Pages they want to see first in their News Feed.
+
+Time spent on a post
+Facebook found that if people are spending a lot more time on a particular post in their feed than the majority of other posts they look at, then it's a good sign the content was relevant to them.
+Facebook is more likely to show that post on your friends’ News Feeds.
+
+ Video engagement
+Facebook surveyed users on how they interacted with video on their News Feeds and found that  many people who were interested in a given video didn't necessarily Like it, comment on it, or share it with their friends. So they started monitoring other forms of video engagement like turning on the audio, switching to full-screen mode, or enabling high definition. So if you turn up the volume on a video or make it full-screen, the algorithm will interpret that you are enjoying the video, and will show you similar videos higher up in your feed.
+
+From all the above mentioned features they came up with a score called RELEVANCY SCORE.
+
+When picking posts for each person who logs on to Facebook, the News Feed algorithm takes into account literally hundreds of variables and can predict whether a given user will Like, click, comment, share, hide, or even mark a post as spam.
+More specifically, the algorithm predicts each of these outcomes with a certain degree of confidence. This prediction is quantified into a single number called a "relevancy score" that's specific both to the user and to that post.
+Once every post that could potentially show up in your feed has been assigned a relevancy score, Facebook's sorting algorithm ranks them and puts them in the order they end up appearing in your feed. This means that every time you log in, the post you see at the very top of your News Feed was chosen over thousands of others as the one most likely to make you react and engage.
+
+Its Financial Impact and why it matters.(As explained in Facebook)
+
+
+Ads are given relevancy scores, too, so that Facebook can show users only the ads that could matter most to them. This is done with the intention of giving the user a better experience -- but it's also helpful for the businesses that are paying for the ads. It's calculated based on the positive feedback (video views, conversions, etc.) and negative feedback Facebook expects an ad to receive from its target audience.
+This helps a business grow or improve from the negative feedback.
+Ads receive a relevance score between 1 and 10, with 10 being the highest. The score is updated as people interact and provide feedback on the ad. Ads with guaranteed delivery — like those bought through reach and frequency — are not impacted by relevance score. Relevance score has a smaller impact on cost and delivery in brand awareness campaigns, since those ads are optimized for reaching people, rather than driving a specific action like installs.
+
+Understanding relevance scores helps advertisers in a few key ways:
+It can lower the cost of reaching people. Put simply, the higher an ad’s relevance score is, the less it will cost to be delivered. This is because our ad delivery system is designed to show the right content to the right people, and a high relevance score is seen by the system as a positive signal.
+Of course, relevance isn’t the only factor our ad delivery system considers. Bid matters too. For instance, if two ads are aimed at the same audience, there’s no guarantee that the ad with an excellent relevance score and low bid will beat the ad with a good relevance score and high bid. But, overall, having strong relevance scores will help advertisers see more efficient delivery through our system.
+It can help advertisers test ad creative options before running a campaign. Advertisers can test different combinations of image and copy with different audiences, and learn which combinations offer the highest relevance scores.
+It can help optimize campaigns already in progress. While ad campaigns are running, advertisers can monitor their relevance scores. If a score begins to dip, it may be an indicator that the ad’s creative or audience needs to be refreshed.
+
+
+Technological impact:
+Because of the success of target ads and news feeds, facebook used it pervasively. There was a decline in “organic sharing”, which created a negative experience for the users whose personal stories were crowded out. This has the effect of many users leaving facebook for other platforms like snapchat and instagram. Mark Zuckerberg announced in a personal blog that the company would change the algorithm that guides newsfeeds to focus more on posts from friends and families, rather than allowing commercial posts to dominate.
+The change will bring Facebook other benefits. By diminishing the influence of news media, it may be able to avoid a repeat of the bad press it received during the 2016 US election when it became a breeding ground for “fake news”, helping spread stories that misled millions.
+
+
+
+Sociological impact:
+This selective feeding of news according to one's taste had the effect of creating ideological echo chambers that validates and amplifies one's preconceived notions. Not being exposed to alternate points of view on a regular basis is not good for healthy and vibrant society.
+
