@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
-
+//prints a string
 int main(void)
 {
-    printf("Hello, World\n");
+    printf("hello, world\n");
 }
 
