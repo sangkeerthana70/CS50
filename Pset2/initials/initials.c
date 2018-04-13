@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include<cs50.h>
-#include<ctype.h>
+#include<ctype.h>//has toupper function
 
 int main(void)
 {
