@@ -39,6 +39,8 @@ int encodeIt(int in, int key) {//takes two arguments, currChar(coming in as char
     int mKey = key % 26;//to make sure the user's input for key is < 26
     int start;
     int end;
+    int bAlphaIn;
+    int eAlphaIn;
     if (isupper(in)) {
        start = 'A';
        end = 'Z';
