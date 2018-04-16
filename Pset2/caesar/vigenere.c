@@ -6,18 +6,30 @@
 
 int main(int argc, string argv[])
 {
+    string key = argv[1];
     //check to see if argc value is > 2
     if (argc != 2)
     {
         printf("Please supply one parameter!\n");
         exit(1);//same as return 1
     }
-    int key = atoi(argv[1]);
-    printf("Value of Key : %i\n", key);
+    for (int k = 0; k < strlen(argv[1]); k++)
+    {
+        if (!isalpha(argv[1][k]))
+        {
+            printf("Please enter only alpha characters as keywords\n");
+        }
+    }
+    printf("you entered Key : %s\n", key);
     //get user input for a string
     string inpStr = get_string("plaintext : ");
     printf("ciphertext: ");//since C has no concatenation in strings printing each char returned after every iteration
-    int result;
+    //int result;
+    printf("plaintext : %s\n", inpStr);
+    /*
+    for (int k = 0, k < strlen(key); k++) {
+        printf("Keyword incremented to next letter in keyword: \n");
+    }
     for (int i = 0, length = strlen(inpStr); i < length; i++)//runs this loop for arg[1] constant which is static
     {
         //check if a char is aplha
@@ -49,5 +61,5 @@ int main(int argc, string argv[])
         }
     }
     printf("\n");
-    return 0;
+    return 0;*/
 }
