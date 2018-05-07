@@ -10,7 +10,7 @@ int main(void)
     int y = 2;
 
     printf("x is %i, y is %i\n", x, y);
-    swap(&x, &y);//pass the address of x and y
+    swap(&x, &y);//pass the address of x and y to the function swap as parameters
     printf("x is %i, y is %i\n", x, y);
 }
 
