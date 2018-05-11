@@ -1,0 +1,115 @@
+CS50 Week 2 Discussions:
+
+Discuss the three sorting algorithms mentioned in the lecture. Look up one additional sorting algorithm and compare it against the initial three.
+1)Bubble Sort.
+The idea behind bubble sort is  to move higher valued elements generally to the right, and lower valued elements generally to the left, we want the lower things to be at the beginning, and the higher things
+to be at the end.
+The algorithm works by comparing each item in the list with the item next to it, and swapping them if required. In other words, the largest element has bubbled to the top of the array. The algorithm repeats this process until it makes a pass all the way through the list without swapping any items.
+Example. Here is one step of the algorithm. The largest element - 7 - is bubbled to the top:
+7, 5, 2, 4, 3, 9
+5, 7, 2, 4, 3, 9
+5, 2, 7, 4, 3, 9
+5, 2, 4, 7, 3, 9
+5, 2, 4, 3, 7, 9
+5, 2, 4, 3, 7, 9
+The worst-case runtime complexity is O(n2).
+
+2)Selection Sort
+The algorithm works by selecting the smallest unsorted item and then swapping it with the item in the next position to be filled.
+The selection sort works as follows: you look through the entire array for the smallest element, once you find it you swap it (the smallest element) with the first element of the array. Then you look for the smallest element in the remaining array (an array without the first element) and swap it with the second element. Then you look for the smallest element in the remaining array (an array without first and second elements) and swap it with the third element, and so on. Here is an example,
+Example.
+29, 64, 73, 34, 20,
+20, 64, 73, 34, 29,
+20, 29, 73, 34, 64
+20, 29, 34, 73, 64
+20, 29, 34, 64, 73
+20, 29, 34, 64, 73
+
+The worst-case runtime complexity is O(n2).
+
+3)Insertion Sort
+To sort unordered list of elements, we remove its entries one at a time and then insert each of them into a sorted part (initially empty). We take an element from unsorted part and compare it with elements in sorted part, moving from right to left.
+Example. We color a sorted part in green, and an unsorted part in black. Here is an insertion sort step by step. We take an element from unsorted part and compare it with elements in sorted part, moving from  right to left.
+29, 20, 73, 34, 64
+29, 20, 73, 34, 64
+20, 29, 73, 34, 64
+20, 29, 73, 34, 64
+20, 29, 34, 73, 64
+20, 29, 34, 64, 73
+
+The worst-case runtime complexity is O(n2) and  best-case runtime complexity is O(n). The advantage of insertion sort comparing it to the previous two sorting algorithm is that insertion sort runs in linear time on nearly sorted data. It takes n operations in the worst case. It takes one additional step, possibly, as our input(adding one more element to an array) grows by 1.
+
+4)Merge Sort.
+Merge Sort runs in the Linearithmic time which is slower than the above three sorting algorithms.
+Linearithmic time is O(n log n)
+Merge-sort is based on the divide-and-conquer paradigm. It involves the following three steps:
+Divide the array into two (or more) subarrays
+Sort each subarray (Conquer)
+Merge them into one (in a smart way!)
+
+Example. Consider the following array of numbers
+27  10  12  25  34  16  15  31
+divide it into two parts
+27  10  12  25            34  16  15  31
+divide each part into two parts
+27  10            12  25            34  16            15  31
+divide each part into two parts
+27       10       12       25       34       16       15       31
+
+merge (cleverly-!) parts
+10  27            12  25            16  34            15  31
+merge parts
+10  12  25  27                 15  16  31  34
+merge parts into one
+10  12  15  16  25  27  31  34
+
+Discuss the concept of big O and little O why is understanding these values important and why does it matter? What are the benefits of good efficiency in a large scale view?
+
+COMPUTATIONAL COMPLEXITY
+Worst-case scenario or BIG-O
+When we talk about the complexity of an algorithm-- which sometimes is referred to as time complexity or space complexity we're generally talking about the worst-case scenario.
+Given the absolute worst pile of data that could be thrown at it, how is this algorithm going to process or deal with that data? We generally call the worst-case runtime of an algorithm big-O.
+So an algorithm might be said to run in O of n or O of n squared.
+
+Best-case scenario or omega
+Sometimes, we also care about the best-case scenario. If the data is everything we wanted it to be and it was absolutely perfect and we were sending this perfect set of data through our algorithm. How would it handle in that situation?
+We sometimes refer to that as big-Omega, so in contrast with big-O, we have big-Omega.
+Big-Omega for the best-case scenario.
+
+Analyzing Big-O
+Generally, when we talk about the complexity of an algorithm, we're talking about the worst-case scenario.
+An algorithm might be said to run in O of n or O of n squared. These are ordered from generally fastest at the top, to generally slowest at the bottom.
+
+Constant time algorithm O(1)
+Constant time algorithms, always take a single operation in the worst-case.
+So constant time algorithms tend to be the fastest, regardless of the size of the data input you pass in. They always take one operation or one unit of resources to deal with. It might be 2, it might be 3, it might be 4. But it's a constant number. It doesn't vary.
+First example-- if we have a function that takes an array of size 1,000 that always just returns four. But then apparently it doesn't actually look at all the data in it-- doesn't really care what's inside of it, of that array. So, that algorithm, despite the fact that it takes 1,000 elements doesn't do anything with them. It just returns four and always has a single step.
+Second example-- When we add 2 nums in a function that just processes two integers. It's not a single step. It's actually a couple steps. WE get a and b, add them together, and output the results.
+So it is 4 steps but it's always constant, regardless of a or b.
+
+Logarithmic time algorithms O(log n)
+They are slightly better.
+And a really good example of a logarithmic time algorithm is the tearing apart of the phone book
+to find Mike Smith in the phone book. We cut the problem in half. And so as n gets larger and larger and
+every time we double n, it only takes one more step. So that's a lot better than, say, linear time. Which is if we  double n, it takes double the number of steps.
+If we triple n, it takes triple the number of steps.
+One step per unit.
+
+Linear time algorithm--O(n)
+This algorithm always takes n operations in the worst case. It takes one additional step, possibly,
+as our input(adding one more element to an array) grows by 1.
+Example-- when we're looking for the number 5 inside of an array. We might have a situation where we can find it fairly early. But we could also have a situation where it might be the last element of the array.
+In an array of size 5, if we're looking for the number 5. It would take 5 steps.
+And if the number  5 is not  in the array. We still actually have to look at every single element of the array in order to determine whether or not 5 is there.  So in the worst-case, which is that the element is last in the array or doesn't exist at all. We still have to look at all of the n elements. And so this algorithm runs in linear time. We can confirm that if we had a 6-element in an array and we were looking for the number 5, it might take 6 steps. If we have a 7-element array and we're looking for the number 5. It might take 7 steps. As we add one more element to our array, it takes one more step.
+That's a linear algorithm in the worst-case.
+
+Linearithmic time O(n log n), Quadratic time O(n2), Factorial time O(n!) and infinite O(infinite) are ranked slower than the above mentioned algorithms.
+
+Factorial time is an infinite time algorithm. It is called stupid sort which  randomly shuffles an array
+and then check to see whether it's sorted. And if it's not, randomly shuffle the array again and check to see whether it's sorted. This  algorithm would run forever and would be an infinite time algorithm.
+
+Benefits of good efficiency in a large scale view
+An algorithm that is going to take a lot of work to process a really large set of data, is going to require money, RAM, and many more resources that will grow depending on the size of the data that is input into the algorithm. This might be ineffecient at the end and costing more time and space.
+A really efficient algorithm can minimize the amount of resources available to deal with it. The more the data that is input into an algorithm it should be able to handle it effeciently with the same run time and fewer resources.
+
+
