@@ -1,0 +1,111 @@
+Talk about pointers and how they work in regards to memory to make strings work:
+
+Pointers are addresses to locations in memory where variables live.
+The notion of a location of a character or any data type stored in memory is called a pointer.
+In other words a pointer is an address of something in memory.
+When we talk about memory here it is the RAM where all volatile data that we use during our functions exist and erased once we turn off our computer,
+This RAM is different from hard disk or solid state drive which we cannot access or manipulate.
+Pointers in C language is a variable that stores/points the address of another variable. A Pointer in C is used to allocate memory dynamically i.e. at run time. The pointer variable might be belonging to any of the data type such as int, float, char, double, short etc.
+
+Pointer Syntax : data_type *var_name;
+Example : int *p;  char *p;
+Where, * is used to denote that “p” is pointer variable and not a normal variable.
+Pointers give us a different way to pass data between functions.
+When we use variable scope in a function , all the data that we pass between functions in C is passed by values which means that we are passing copies of variables to a function, and not the actual variables to the function.
+The function does what it will and it calculates some value, and maybe we use that value when it gives it back.
+
+Power of pointers
+If we use pointers instead of using variables, or copies of the variables,
+we can now pass the variables around between functions in a different way.
+This means that if we make a change in one function, that change will actually take effect in a different function. This was something that we couldn't do previously.
+Example: Swap function.
+In the swap function if we ever try to swap the value of two variables 'X' and 'Y', and we pass them to a function called swap, inside of the function 'swap' the variables do exchange values. One becomes two, two becomes one, but we don't actually change anything in the original function, in the caller. This is because we're only working with copies of these variables(temporary variables).
+The temp variables did the swap of variables 'X' and 'Y' but the function noswap did not return those swapped variables back to the main function because the memory is ignored or erased as soon as the noswap function was over. The reason is that functions have no access to each other's memory spaces but instead they only get copies of what is passed in to them.
+With pointers though, we can actually pass X and Y to a function. That function can do something with them. And those variables values can actually change. So that's quite a change in our ability to work with data using pointers.
+KEY POINTS TO REMEMBER ABOUT POINTERS IN C:
+Normal variable stores the value whereas pointer variable stores the address of the variable.
+The content of the C pointer will always be a whole number i.e. address.
+ Always C pointer is initialized to null, i.e. int *p = null.
+ The value of null pointer is 0.
+& symbol is used to get the address of the variable.
+* symbol is used to get the value of the variable that the pointer is pointing to.
+
+If a pointer in C is assigned to NULL, it means it is pointing to nothing. Two pointers can be subtracted to know how many elements are available between these two pointers. But, Pointer addition, multiplication, division are not allowed. The size of any pointer is 2 byte (for 16 bit compiler).
+
+NULL Pointers
+Error checking of NULL means we are checking to see if there is enough memory storage required by us. If there is only part or half of the memory needed by us it will not give us the part available but will return NULL which means that there is not enough space in memory. If we don't set its value to something meaningful immediately, we should always set the pointer to point to null. That's very different than just leaving the value as it is and then declaring a pointer and just assuming it's null because that's rarely true.
+So we should always set the value of a pointer to null if we don't set its value to something meaningful immediately.
+You can check whether a pointer's value is null using the equality operator
+(==), just like we compare any integer values or character values using (==)
+as well.
+
+Working with strings using pointers.
+
+String is a synonym for Char *. Strings don’t exist in C.
+Learning how to manipulate strings is quite important in any programming language. In C, a string is just an array of characters that does not have any inherited properties. A valid C string ends with the null character ‘\0’ [slash zero]. Therefore the amount of memory required for a C  string is 1 + length of the actual string. Failure to make sure that a string ends with ‘\0’ may result in unpredictable behavior in your code.
+Using pointers in string
+char* s;
+The * notation refers to the memory address of a character.
+The above statement simply indicates that s is a pointer to (or address of) a character. A String is simply defined as an array of characters and s is the address of the first character (byte) of the string.
+Initializing a String and memory allocation
+A constant string s can be simply initialized as
+char* s = “anu\0”;
+However no memory is allocated for s. If we try to write to s, then it may cause a segmentation fault since memory has not been allocated explicitly.
+For example,
+fscanf(stdin,”%s”,s);
+would cause a problem, So it is important to allocate memory first and then copy the string to the location. To allocate a block of memory to hold a string, we use the malloc function
+The malloc(int n) returns a pointer to (or an address of) a block of n bytes. A string with n characters requires n+1 bytes (n for the string AND 1 byte to store the ‘\0’ character). Therefore, to store the input string
+“Anuradha”, we would require 8 characters. The following code
+allocates 8 characters to store the string “Anuradha” + ‘\0’.
+
+Syntax:
+char *S = malloc(8*sizeof(char));
+strcpy(S,”anuradha”);
+It is important to note that malloc allocates memory inside what is called the “dynamic heap” and unless memory is explicitly freed using free function , the malloced block stays even after leaving the scope of the code.
+
+Alternatively we can also write the above code as:
+char s[8];
+strcpy(S,”anuradha”);
+In this case, 8 bytes is allocated from the run time stack and s no longer available once it is out of scope.
+
+
+
+
+
+Discuss what Structs are and how they could be used to solve problems:
+
+A structure is sort of like a super variable. It's a variable that contains other variables inside of it.
+Structures allow us to unify variables of different types into a single, new variable type, which we can assign its own type name. This is a really strong thing to be able to do, because we can now group elements of different data types together that have a logical connection.
+We haven't been able to mix up different data types together.
+We can't, say, pair an integer, and a character, and a double all
+in the same thing and call that a single unit.
+But with structures, or frequently referred to as structs, we actually can.
+
+
+How to create a structure?
+‘struct’ keyword is used to create a structure. Following is an example.
+
+struct addrress
+{
+   char name[50];
+   char street[100];
+   char city[50];
+   char state[20]
+   int pin;
+};
+
+Struct, that's the keyword that indicates a new data type here. In particular, the data type's name is going to be struct address. But this is the tip off to the compiler that this is a group of variables that is going to be considered part of the same type. If we create multiple structs in the same program, we need to distinguish between struct and struct.  So struct address, might also have struct current resident, for example, in the same program.
+Inside of the curly braces are all of the so-called fields, or members of the structure. We can see that there is  mixing up integers and characters and doubles which will be going to be part of this new data type. Lastly, the final thing we need to do is to add a semicolon at the end.
+Semicolon is important unlike a function, for example, we would just have open curly brace, close curly brace. This looks like a function definition, but it's not, and so the semicolon is just a reminder that you need to put it there, because the compiler will otherwise not know what to do with it.
+Structures are defined at the top of the program as they will be used by multiple functions inside the main program. Sometimes also instead of defining the structure at the very top where we put our pound includes and our pound defines, for example, we can put them in separate dot h files, which we  then pound include ourselves.
+Accessing sub-variables.
+To access sub-variables inside  a structure  we have something called the dot operator, which allows us to access the fields of the structure.
+
+Memory allocation of Structures
+Structures do not need to be created on the stack. Just like any other variable, we can dynamically allocate them. If we have a program that might be generating many structures, we don't know how many we're going to need,
+then we need to dynamically allocate those structures
+as our program is running.
+
+Structs are generally useful whenever a lot of data needs to be grouped together--for instance, they can be used to hold records from a database or to store information about contacts in an address book. In the address example above, a struct could be used that would hold all of the information about a single contact--name, address, city,pin and so forth.
+
+
